@@ -275,7 +275,19 @@ p {
 
 .team-member {
   position: relative;
+  margin-bottom: 30px;
 }
+
+.test{
+  transition: .2s linear;
+  height: 470px;
+}
+
+.test:hover{
+  transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 0 #95e1d3;
+}
+
 
 .overlay {
   display: flex;
@@ -290,20 +302,23 @@ p {
   background-image: linear-gradient(rgba(243, 129, 129, 0.8), rgba(252, 227, 138, 0.8));
 }
 
-.overlay:hover {
+/* .overlay:hover {
   transform: translate(-10px, -10px);
   box-shadow: 10px 10px 0 #95e1d3;
   transition: all 0, 2s;
-}
+} */
 
 .overlay a {
   height: 56px;
   width: 56px;
   background-color: #fce38a;
   display: inline-block;
-  border: 1px solid transparent;
+  border-right: 1px solid #f38181;
   transition: all 200ms linear;
-  margin: 1px;
+}
+
+.overlay a:last-child{
+  border-right: none;
 }
 
 .overlay a:hover {
@@ -313,6 +328,7 @@ p {
 .team-member:hover .overlay {
   z-index: 20;
 }
+
 
 .team-name h3 {
   text-transform: uppercase;
@@ -378,11 +394,12 @@ footer form {
 }
 
 footer button {
-  height: 100%;
+  height: 40px;
   border-style: none;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 700;
+  vertical-align: top;
   color: #ffffff;
   text-transform: uppercase;
   background-color: #95e1d3;
@@ -392,10 +409,13 @@ footer button {
 
 footer input {
   width: 230px;
-  height: 100%;
+  height: 38px;
+  padding: 0;
+  vertical-align: top;
   border-style: none;
   border:1px solid #e7e7e7;
   outline: none;
+  padding-left: 10px;
 }
 
 footer input::placeholder {
